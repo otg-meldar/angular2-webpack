@@ -5,10 +5,23 @@
   </nav>
 </header>
 <main>
-  <h1 class="title">Hello from {{api.title}} !</h1>
+  <!--<h1 class="title">Hello from {{api.title}} !</h1>-->
 
   <!-- Images (and assets) are parsed and loaded from within the public directory -->
-  <img src="/img/shield-with-beta.png">
+  <!--<img src="/img/shield-with-beta.png">-->
+
+  <div *ngFor="#business of businessService?.result?.data">
+    {{business.type}},
+    {{business.id}},
+    {{business.attributes.business_name}},
+    {{business.attributes.city}},
+    {{business.attributes.state}},
+    {{business.attributes.closed}},
+
+    <!--<div *ngFor="#attr of business?.attributes">-->
+
+    <!--</div>-->
+  </div>
 
   <router-outlet></router-outlet>
 </main>

@@ -53,3 +53,5 @@ __build__/**
 # IDE #
 .idea/
 *.swp
+/src/**/*.js
+/src/**/*.js.map

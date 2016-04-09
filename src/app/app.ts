@@ -4,7 +4,7 @@ import {FORM_PROVIDERS} from 'angular2/common';
 
 import '../style/app.scss';
 
-import {Api} from './services/api/api';
+import {BusinessService} from './services/api/api';
 import {Home} from './components/home/home';
 import {About} from "./components/about/about";
 
@@ -14,7 +14,7 @@ import {About} from "./components/about/about";
  */
 @Component({
   selector: 'app', // <app></app>
-  providers: [...FORM_PROVIDERS, Api],
+  providers: [...FORM_PROVIDERS, BusinessService],
   directives: [...ROUTER_DIRECTIVES],
   pipes: [],
   styles: [require('./app.scss')],
@@ -26,7 +26,9 @@ import {About} from "./components/about/about";
 ])
 export class App {
   url: string = 'https://github.com/preboot/angular2-webpack';
+  // businesses: {};
 
-  constructor(public api: Api) {
+  constructor(public businessService: BusinessService) {
+    // this.businesses = businessService.result.data;
   }
 }
